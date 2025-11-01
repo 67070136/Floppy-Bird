@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCanvas Showcase - Project Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com">
+        document.addEventListener('DOMContentLoaded', function() {
+            const youtubeButtons = document.querySelectorAll('[data-feather="youtube"]');
+            youtubeButtons.forEach(button => {
+                feather.replace({
+                    'width': 16,
+                    'height': 16
+                }, button);
+            });
+        });
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="rounded-xl overflow-hidden mb-16 bg-gradient-to-r from-purple-900 to-blue-800">
+            <div class="min-h-[400px] flex items-center justify-center">
+                <div class="text-center p-8">
+                    <h1 class="text-5xl font-bold mb-4">Floppy Bird</h1>
+                    <p class="text-xl mb-8">A modern take on the classic Flappy Bird game built with HTML5, CSS3, and JavaScript</p>
+</div>
+            </div>
+        </section>
+
+        <!-- Project Details Section -->
+        <section class="mb-16">
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6">Project Details</h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">Description</h3>
+                    <p class="text-gray-300 mb-4">
+                        Floppy Bird is a browser-based game inspired by the popular Flappy Bird. The project demonstrates core JavaScript concepts including:
+                        <ul class="list-disc pl-6 text-gray-300 mb-4">
+                            <li>Game loop implementation using requestAnimationFrame</li>
+                            <li>Collision detection algorithms</li>
+                            <li>Event handling for user input</li>
+                            <li>DOM manipulation for game rendering</li>
+                            <li>Score tracking and game state management</li>
+                        </ul>
+                    </p>
+</div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">Demo Video</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                    <div class="w-3/4 mx-auto rounded-lg bg-black overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-[500px]" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=54_RPQaYZLkilOYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center transition-all">
+                            <i data-feather="youtube" class="mr-2"></i> Watch on YouTube
+                        </a>
+                    </div>
+</div>
+                </div>
+                <!-- WebAssembly Section -->
+                <div class="mb-8 bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Floppy Bird Game</h3>
+                    <div class="mb-4">
+                        <p class="text-gray-300 mb-4">
+                            This version uses WebAssembly compiled from C source code for optimal performance.
+                        </p>
+                        <div id="wasm-game-container" class="bg-black rounded-lg p-4 flex justify-center">
+                            <canvas id="wasm-canvas" width="1280" height="720" class="border border-gray-600"></canvas>
+</div>
+                    </div>
+<div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://github.com/67070136/Floppy-Bird" 
+                           target="_blank" 
+                           class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition">
+                            <i data-feather="github" class="mr-2"></i> Source Code
+                        </a>
+</div>
+                </div>
+<div class="mb-8">
+<h3 class="text-xl font-bold mb-4">Team Members</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <img src="67070130.jpg" alt="Member 1" class="rounded-full mx-auto mb-2" style="width:128px;height:128px;object-fit:cover">
+<p class="font-medium">67070130</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="67070136.png" alt="Member 2" class="rounded-full mx-auto mb-2" style="width:128px;height:128px;object-fit:cover">
+<p class="font-medium">67070136</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="67070186.jpg" alt="Member 3" class="rounded-full mx-auto mb-2" style="width:128px;height:128px;object-fit:cover">
+<p class="font-medium">67070186</p>
+</div>
+</div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Project Poster (A1 Horizontal)</h3>
+                    <div class="flex flex-col items-center">
+                    <div class="mb-4 flex justify-center">
+                    <img src="poster.png" class="rounded-lg shadow-lg max-w-full h-auto">
+</div>
+                    <a href="poster.png" target="_blank" 
+class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition font-medium">
+                            <i data-feather="image" class="mr-2"></i> View Full Poster
+</a>
+</div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        feather.replace({
+            'width': 20,
+            'height': 20
+        });
+</script>
+</body>
+</html>
