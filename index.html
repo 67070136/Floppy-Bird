@@ -50,11 +50,11 @@
 
                     <h3 class="text-xl font-bold mb-4 mt-8">การทำงานภายในเกม</h3>
                     <ul class="list-disc pl-6 text-gray-300">
-                        <li><strong>Bird:</strong> สร้างสี่เหลี่ยมผืนผ้าพร้อมโหลดภาพ <code>Bird.png</code></li>
+                        <li><strong>Bird:</strong> สร้างสี่เหลี่ยมผืนผ้าพร้อมโหลดภาพ Bird.png</li>
                         <li><strong>Gravity & Jump Mechanic:</strong> ขยับรูปนกลงตามค่า Gravity ทุกๆ เฟรม และเมื่อผู้เล่นกด Spacebar จะลบค่าตาม FlapStrength ทำให้นกเด้งขึ้น</li>
                         <li><strong>Dash Mechanic:</strong> เมื่อผู้เล่นกด Shift นกจะหยุดความเร็วชั่วขณะ (ลอยอยู่กับที่) และเปลี่ยนภาพเป็นรูปพุ่ง เพิ่มความเร็วท่อด้วย Dash speed ให้เหมือนนกบินเร็วขึ้น</li>
                         <li><strong>Collision Check:</strong> ตรวจสอบพิกัดและขนาดของ A เทียบกับ B หากทับกันถือว่าชน</li>
-                        <li><strong>Pipe:</strong> สร้างท่อคู่ห่างกันตามค่า <code>Pipe gap = 250px</code> พร้อมสี่เหลี่ยมล่องหนตรวจผ่าน เมื่อผ่านได้ คะแนน +1 ท่อเคลื่อนที่ซ้ายตาม Pipe speed สร้างภาพลวงตาการบิน</li>
+                        <li><strong>Pipe:</strong> สร้างท่อคู่ห่างกันตามค่า Pipe gap = 250px พร้อมสี่เหลี่ยมล่องหนตรวจผ่าน เมื่อผ่านได้ คะแนน +1 ท่อเคลื่อนที่ซ้ายตาม Pipe speed สร้างภาพลวงตาการบิน</li>
                         <li><strong>Pipe Spawn:</strong> ทุกเฟรม Pipe timer จะเพิ่มขึ้น เมื่อครบค่า (80) จะหาท่อว่างใน MAX_PIPE และเปิดใช้งานใหม่ (active = 1, scored = 0)</li>
                     </ul>
                 </div>
@@ -151,5 +151,6 @@
     </script>
 </body>
 </html>
+
 
 
