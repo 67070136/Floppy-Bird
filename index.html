@@ -38,7 +38,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Project Details Section -->
         <section class="mb-16">
             <div class="bg-gray-800 rounded-xl p-8">
@@ -52,7 +51,7 @@
                         <li>SDL2_mixer — สำหรับ sound effect และเพลงประกอบ</li>
                         <li>SDL2_ttf — สำหรับโหลดฟอนท์</li>
                     </ul>
-
+        
                     <h3 class="text-xl font-bold mb-4 mt-8">การทำงานภายในเกม</h3>
                     <ul class="list-disc pl-6 text-gray-300">
                         <li><strong>Bird:</strong> สร้างสี่เหลี่ยมผืนผ้าพร้อมโหลดภาพ Bird.png</li>
@@ -62,7 +61,17 @@
                         <li><strong>Pipe:</strong> สร้างท่อคู่ห่างกันตามค่า Pipe gap = 250px พร้อมสี่เหลี่ยมล่องหนตรวจผ่าน เมื่อผ่านได้ คะแนน +1 ท่อเคลื่อนที่ซ้ายตาม Pipe speed สร้างภาพลวงตาการบิน</li>
                         <li><strong>Pipe Spawn:</strong> ทุกเฟรม Pipe timer จะเพิ่มขึ้น เมื่อครบค่า (80) จะหาท่อว่างใน MAX_PIPE และเปิดใช้งานใหม่ (active = 1, scored = 0)</li>
                     </ul>
+        
+                    <h3 class="text-xl font-bold mb-4 mt-8">อุปสรรคและข้อจำกัด</h3>
+                    <p class="text-gray-300 mb-4">
+                        ในระหว่างพัฒนาโครงการ มีอุปสรรคเรื่องการทำฐานข้อมูลสำหรับ leaderboard ซึ่งไม่สามารถทำได้ตามแผนเดิม 
+                        จึงเลือกที่จะเลื่อนฟีเจอร์นี้ไปก่อน ปัจจุบันตัวเกมสามารถเล่นได้แล้ว 
+                        แต่ยังไม่มีระบบ leaderboard สำหรับเรียงลำดับคะแนนผู้เล่นสูงสุด (Top 10) ตามที่วางแผนไว้ตั้งแต่แรก
+                    </p>
                 </div>
+                ...
+            </div>
+        </section>
 
                 <!-- Demo Video -->
                 <div class="mb-8">
@@ -165,6 +174,7 @@
     </script>
 </body>
 </html>
+
 
 
 
