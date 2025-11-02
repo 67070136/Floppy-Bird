@@ -40,16 +40,22 @@
                 <h2 class="text-3xl font-bold mb-6">Project Details</h2>
                 
                 <div class="mb-8">
-                    <h3 class="text-xl font-bold mb-4">Description</h3>
-                    <p class="text-gray-300 mb-4">
-                        Floppy Bird is a browser-based game inspired by the popular Flappy Bird. The project demonstrates core C concepts including:
-                    </p>
+                    <h3 class="text-xl font-bold mb-4">Library ที่ใช้</h3>
                     <ul class="list-disc pl-6 text-gray-300 mb-4">
-                        <li>Game loop implementation using requestAnimationFrame</li>
-                        <li>Collision detection algorithms</li>
-                        <li>Event handling for user input</li>
-                        <li>DOM manipulation for game rendering</li>
-                        <li>Score tracking and game state management</li>
+                        <li>SDL2 — สำหรับสร้างหน้าต่างเกมและ render ต่างๆ</li>
+                        <li>SDL2_image — สำหรับโหลดรูปภาพ</li>
+                        <li>SDL2_mixer — สำหรับ sound effect และเพลงประกอบ</li>
+                        <li>SDL2_ttf — สำหรับโหลดฟอนท์</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 mt-8">การทำงานภายในเกม</h3>
+                    <ul class="list-disc pl-6 text-gray-300">
+                        <li><strong>Bird:</strong> สร้างสี่เหลี่ยมผืนผ้าพร้อมโหลดภาพ <code>Bird.png</code></li>
+                        <li><strong>Gravity & Jump Mechanic:</strong> ขยับรูปนกลงตามค่า Gravity ทุกๆ เฟรม และเมื่อผู้เล่นกด Spacebar จะลบค่าตาม FlapStrength ทำให้นกเด้งขึ้น</li>
+                        <li><strong>Dash Mechanic:</strong> เมื่อผู้เล่นกด Shift นกจะหยุดความเร็วชั่วขณะ (ลอยอยู่กับที่) และเปลี่ยนภาพเป็นรูปพุ่ง เพิ่มความเร็วท่อด้วย Dash speed ให้เหมือนนกบินเร็วขึ้น</li>
+                        <li><strong>Collision Check:</strong> ตรวจสอบพิกัดและขนาดของ A เทียบกับ B หากทับกันถือว่าชน</li>
+                        <li><strong>Pipe:</strong> สร้างท่อคู่ห่างกันตามค่า <code>Pipe gap = 250px</code> พร้อมสี่เหลี่ยมล่องหนตรวจผ่าน เมื่อผ่านได้ คะแนน +1 ท่อเคลื่อนที่ซ้ายตาม Pipe speed สร้างภาพลวงตาการบิน</li>
+                        <li><strong>Pipe Spawn:</strong> ทุกเฟรม Pipe timer จะเพิ่มขึ้น เมื่อครบค่า (80) จะหาท่อว่างใน MAX_PIPE และเปิดใช้งานใหม่ (active = 1, scored = 0)</li>
                     </ul>
                 </div>
 
@@ -119,13 +125,10 @@
                     <h3 class="text-xl font-bold mb-4">Project Poster</h3>
                     <div class="flex flex-col items-center">
                         <div class="mb-4 flex justify-center">
-                            <!-- แสดงภาพแนวตั้ง -->
                             <img src="poster.png" 
                                  alt="Floppy Bird Poster" 
                                  class="rounded-lg shadow-lg h-[900px] w-auto max-w-full object-contain">
                         </div>
-
-                        <!-- ปุ่มเปิดลิงก์ภายนอก -->
                         <a href="https://drive.google.com/file/d/1tZrBJpfJud6NTUVsFovZ-mwovLTlPwKC/view?usp=sharing" target="_blank" 
                            class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition font-medium">
                             <i data-feather="external-link" class="mr-2"></i> View Full Poster
@@ -148,6 +151,5 @@
     </script>
 </body>
 </html>
-
 
 
